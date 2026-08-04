@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    
+    html{
+    scroll-behavior:smooth;
+    }
+    
+    body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef4fb;
+    color:#333;
+    transition:.4s;
+    }
+    
+    .titulo{
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    box-shadow:0 5px 15px #0003;
+    }
+    
+    .titulo h1{
+    font-size:42px;
+    margin-bottom:10px;
+    }
+    
+    .titulo p{
+    font-size:18px;
+    margin-bottom:20px;
+    }
+    
+    #tema{
+    background:white;
+    color:#1565c0;
+    border:0;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+    }
+    
+    #tema:hover{
+    background:#ff9800;
+    color:white;
+    }
+    
+    .menu{
+    background:#0d47a1;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:10;
+    }
+    
+    .menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    }
+    
+    .menu a:hover{
+    color:orange;
+    }
+    
+    .pesquisa{
+    margin:35px auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    }
+    
+    #pesquisa{
+    width:450px;
+    max-width:90%;
+    padding:15px;
+    border-radius:30px;
+    border:2px solid #1565c0;
+    font-size:16px;
+    }
+    
+    #contador{
+    color:#1565c0;
+    font-weight:bold;
+    }
+    
+    main{
+    width:92%;
+    max-width:1400px;
+    margin:auto;
+    }
+    
+    .secao{
+    margin-bottom:50px;
+    }
+    
+    .secao h2{
+    color:#1565c0;
+    border-left:8px solid orange;
+    padding-left:10px;
+    margin-bottom:25px;
+    }
+    
+    .categorias{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    }
+    
+    .categorias button{
+    padding:12px 20px;
+    border:0;
+    border-radius:30px;
+    background:#1565c0;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    }
+    
+    .categorias button:hover,
+    .categorias button.ativo{
+    background:orange;
+    transform:scale(1.05);
+    }
+    
+    .galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    }
+    
+    .livro{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 10px 20px #0002;
+    transition:.4s;
+    animation:aparecer .6s;
+    }
+    
+    .livro:hover{
+    transform:translateY(-10px);
+    }
+    
+    .livro img{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    background:#eee;
+    border-radius:10px;
+    }
+    
+    .livro h3{
+    margin-top:15px;
+    color:#1565c0;
+    }
+    
+    .autor{
+    color:#666;
+    margin-top:10px;
+    }
+    
+    .status{
+    margin-top:10px;
+    color:green;
+    font-weight:bold;
+    }
+    
+    .livro button{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:0;
+    border-radius:8px;
+    background:#ff9800;
+    color:white;
+    cursor:pointer;
+    }
+    
+    .livro button:hover{
+    background:#ef6c00;
+    }
+    
+    footer{
+    margin-top:60px;
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    }
+    
+    footer p{
+    margin-top:10px;
+    }
+    
+    .dark{
+    background:#1c1c1c;
+    color:white;
+    }
+    
+    .dark .menu,
+    .dark footer{
+    background:#111;
+    }
+    
+    .dark .livro{
+    background:#2c2c2c;
+    }
+    
+    .dark .livro h3,
+    .dark .secao h2,
+    .dark #contador{
+    color:#64b5f6;
+    }
+    
+    .dark .autor{
+    color:#ddd;
+    }
+    
+    .dark .livro img{
+    background:#444;
+    }
+    
+    .dark #pesquisa{
+    background:#333;
+    color:white;
+    }
+    
+    @keyframes aparecer{
+    from{
+    opacity:0;
+    transform:translateY(30px);
+    }
+    
+    to{
+    opacity:1;
+    transform:translateY(0);
+    }
+    }
+    
+    @media(max-width:650px){
+    
+    .titulo h1{
+    font-size:30px;
+    }
+    
+    .menu{
+    flex-direction:column;
+    align-items:center;
+    }
+    
+    .livro img{
+    height:250px;
+    }
+    
+    .categorias button{
+    width:90%;
+    }
+    
+    }
